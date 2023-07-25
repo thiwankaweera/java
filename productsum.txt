@@ -1,0 +1,32 @@
+BEGIN
+FUNCTION main()
+    DECLARE sum2Ints, prod2Ints, div2Ints AS INTEGER
+    INPUT choice
+    WHILE choice != 0
+        CASE choice
+            OF 1:
+                sum2Ints <- 0
+            OF 2:
+                prod2Ints <- 0
+            OF 3:
+                div2Ints <- 0
+            DEFAULT:
+                OUTPUT "Invalid choice"
+        END CASE
+        INPUT choice
+    END WHILE
+END FUNCTION
+
+METHOD:main
+IMPORT:none
+EXPORT:none
+ALGORITHM:
+	Do
+		PRINT  "Welcome to PDI.
+			1. Sum of 2 Ints
+			2. Product of 2 Ints
+			3. Check if @ Ints are Divisible
+			0. Exit"
+		INPUT choice WITH PROMPT "Enter option to choice"
+		CASE of choice
+				CASE 1: CALL sumInts <- none
